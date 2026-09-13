@@ -2,7 +2,7 @@
 
 # duncannah's NUR repository
 
-Personal Nix packages and modules.[^systems]
+Personal Nix packages and modules.
 
 [![Build](https://img.shields.io/github/actions/workflow/status/duncannah/nur-packages/build.yml)](https://github.com/duncannah/nur-packages/actions/workflows/build.yml) [![Cachix Cache](https://img.shields.io/badge/cachix-duncannah--nur-purple.svg)](https://duncannah-nur.cachix.org)
 
@@ -74,8 +74,9 @@ pkgs.nur.repos.duncannah.gomerge
 
 ## Cachix
 
-Cachix provides builds from the `duncannah-nur` cache. Add this to the top
-level of the flake that uses this repository:
+Cachix provides builds from the `duncannah-nur` cache, for `x86_64-linux`, `aarch64-linux`, and `aarch64-darwin`.
+
+Add this to the top level of the flake that uses this repository:
 
 ```nix
 nixConfig = {
@@ -85,5 +86,3 @@ nixConfig = {
 ```
 
 These settings work with standalone Nix, NixOS, and nix-darwin. Only trust caches and signing keys that you have reviewed. See the [Nix binary cache guide](https://nix.dev/guides/recipes/add-binary-cache.html) and [Stop trusting Nix caches](https://web.archive.org/web/20251001154446/https://garnix.io/blog/stop-trusting-nix-caches).
-
-[^systems]: The build workflow targets `x86_64-linux`, `aarch64-linux`, and `aarch64-darwin`.
