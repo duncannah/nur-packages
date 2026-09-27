@@ -17,7 +17,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "proton-wineland";
   version = "11.0-20260922";
 
-  inherit (finalAttrs.passthru.variants."x86_64-linux") src toolName;
+  inherit (finalAttrs.passthru.variants.${stdenvNoCC.hostPlatform.system}) src toolName;
 
   dontUnpack = true;
   dontConfigure = true;
