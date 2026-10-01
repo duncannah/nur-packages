@@ -8,6 +8,10 @@ Personal Nix packages and modules.
 
 </div>
 
+## Unattended updates
+
+Packages get updated automatically, and updates that build successfully go straight to `main` without human review. A passing build does not mean everything works, so occasional breakage is possible.
+
 ## Usage
 
 ### Run directly from this flake
